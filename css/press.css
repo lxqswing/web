@@ -1,0 +1,173 @@
+.press_img{
+	background: url(../images/press_demopho1.jpg) no-repeat 0 0;
+	position: relative;
+}
+.press_action{
+	display: block;
+	left: 50%;
+	top: 50%;
+	width: 26px;
+	height: 26px;
+	margin-left: -13px;
+	margin-top: -13px;
+	position: absolute;
+	background: url(../images/press_demopho1.jpg) no-repeat center center;
+}
+.press_img .current{
+	background: url(../images/press_demopho.jpg) no-repeat center center;
+}
+.bx-default-pager{
+	display: none;
+}
+.pop_presspho .bx-controls-direction a{
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	right: -77px;
+	overflow: hidden;
+	text-indent: -9999em;
+}
+.bx-controls-direction .bx-next{
+	top: 140px;
+}
+.bx-controls-direction .bx-prev{
+	top: 238px;
+}
+
+
+.pop_next, .pop_prev, .pop_close{
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	background: url("../images/popicon.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.pop_next{
+	background-position: 0 -30px;
+}
+.pop_prev{
+	background-position: 0 -60px;
+}
+@keyframes playTop
+{
+	0%   {transform:translateY(0)}
+	50% {transform:translateY(-30px)}
+	51% {transform:translateY(30px)}
+	100% {transform:translateY(0)}
+}
+
+@-moz-keyframes playTop /* Firefox */
+{
+	0%   {transform:translateY(0)}
+	50% {transform:translateY(-30px)}
+	51% {transform:translateY(30px)}
+	100% {transform:translateY(0)}
+}
+
+@-webkit-keyframes playTop /* Safari and Chrome */
+{
+	0%   {transform:translateY(0)}
+	50% {transform:translateY(-30px)}
+	51% {transform:translateY(30px)}
+	100% {transform:translateY(0)}
+}
+
+@-o-keyframes playTop /* Opera */
+{
+	0%   {transform:translateY(0)}
+	50% {transform:translateY(-30px)}
+	51% {transform:translateY(30px)}
+	100% {transform:translateY(0)}
+}
+
+@keyframes playLeft
+{
+	0%   {transform:translateX(0)}
+	50% {transform:translateX(-30px)}
+	51% {transform:translateX(30px)}
+	100% {transform:translateX(0)}
+}
+
+@-moz-keyframes playLeft /* Firefox */
+{
+	0%   {transform:translateX(0)}
+	50% {transform:translateX(-30px)}
+	51% {transform:translateX(30px)}
+	100% {transform:translateX(0)}
+}
+
+@-webkit-keyframes playLeft /* Safari and Chrome */
+{
+	0%   {transform:translateX(0)}
+	50% {transform:translateX(-30px)}
+	51% {transform:translateX(30px)}
+	100% {transform:translateX(0)}
+}
+
+@-o-keyframes playLeft /* Opera */
+{
+	0%   {transform:translateX(0)}
+	50% {transform:translateX(-30px)}
+	51% {transform:translateX(30px)}
+	100% {transform:translateX(0)}
+}
+
+
+@keyframes playRight
+{
+	0%   {transform:translateX(0)}
+	50% {transform:translateX(30px)}
+	51% {transform:translateX(-30px)}
+	100% {transform:translateX(0px)}
+}
+
+@-moz-keyframes playRight /* Firefox */
+{
+	0%   {transform:translateX(0)}
+	50% {transform:translateX(30px)}
+	51% {transform:translateX(-30px)}
+	100% {transform:translateX(0px)}
+}
+
+@-webkit-keyframes playRight /* Safari and Chrome */
+{
+	0%   {transform:translateX(0)}
+	50% {transform:translateX(30px)}
+	51% {transform:translateX(-30px)}
+	100% {transform:translateX(0px)}
+}
+
+@-o-keyframes playRight /* Opera */
+{
+	0%   {transform:translateX(0)}
+	50% {transform:translateX(30px)}
+	51% {transform:translateX(-30px)}
+	100% {transform:translateX(0px)}
+}
+
+.current .pop_prev{
+	animation: playLeft 1s linear 0s 1 normal;
+	/* Firefox: */
+	-moz-animation: playLeft 1s linear 0s 1 normal;
+	/* Safari and Chrome: */
+	-webkit-animation: playLeft 1s linear 0s 1 normal;
+	/* Opera: */
+	-o-animation: playLeft 1s linear 0s 1 normal;
+}
+.current .pop_next{
+	animation: playRight 1s linear 0s 1 normal;
+	/* Firefox: */
+	-moz-animation: playRight 1s linear 0s 1 normal;
+	/* Safari and Chrome: */
+	-webkit-animation: playRight 1s linear 0s 1 normal;
+	/* Opera: */
+	-o-animation: playRight 1s linear 0s 1 normal;
+}
+.current .pop_close{
+	animation: playTop 1s linear 0s 1 normal;
+	/* Firefox: */
+	-moz-animation: playTop 1s linear 0s 1 normal;
+	/* Safari and Chrome: */
+	-webkit-animation: playTop 1s linear 0s 1 normal;
+	/* Opera: */
+	-o-animation: playTop 1s linear 0s 1 normal;
+}
