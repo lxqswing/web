@@ -154,7 +154,7 @@ $(function(){
     
     $(".home_news .bx-controls-direction a").click(function(e){
         e.preventDefault();
-        $(".home_news .bx-viewport").fadeOut("fast");
+        $(".home_news .bx-viewport").fadeOut("fast"); 
         $(".home_news .bx-viewport").fadeIn("slow");
     });
     $(".home_cambtn").click(function(e){
