@@ -9,9 +9,11 @@ $(function(){
         var headerTop = $(window).height()-66;
         if(wScroll>headerTop){
         	$(".header").css({"position":"fixed",top:"0",marginTop:"0"});
+            $('.banpho').css('display','none');
         }
         if(wScroll<headerTop){
-        	$(".header").css({"position":"relative",top:"auto",marginTop:"-60px"});
+        	$(".header").css({"position":"absolute",top:"auto"});
+            $('.banpho').css('display','block');
         }
     });
     $(".sub_nav_first, .sub_nav_second, .sub_nav_third").bind('mousewheel', function(event) {

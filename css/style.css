@@ -28,7 +28,7 @@ a:hover{color:#000}
 
 /* FF Used
 ================================================================================================= */
-.header{height: 66px;position: relative; background:#fff;width: 100%;font-size: 14px; margin-top: -60px;z-index: 99;}
+.header{height: 66px;position: relative; background:#fff;width: 100%;font-size: 14px; z-index: 99;}
 	.logo{background: url('../images/logo.png') no-repeat;width: 14px;height: 14px;position: absolute;left:32px;top:24px;}
 	.language{position: absolute;right: 98px;top:0; line-height: 60px;}
 	.search{background: url('../images/hd_search.png') no-repeat;width: 17px;height: 17px;position: absolute;right:46px;top:22px;}
@@ -85,16 +85,16 @@ a:hover{color:#000}
 	.pagetit h1{color:#000;font-size: 48px;width: 1100px;margin: 0 auto}
 	.pagetitarr{position: absolute;width: 24px;height: 16px;background: url('../images/pagetitarr.png') no-repeat 0 0;right: 150px;top:40px;}
 	.pagetitarrbottom{background-position: top right;right:55px;}
-.banpho{text-align: center;background: #000;overflow: hidden; width: 100%; z-index: 5;}
+.banpho{text-align: center;background: #000;overflow: hidden; width: 100%; z-index: 1; position: fixed;left: 0;top: 0;}
 	.banpho img{width: 100%}
 
 /**/
-.banner_footer{background: url('../images/banner_ft.png') repeat;height: 360px; position: relative;z-index: 3;}
+.banner_footer{background: url('../images/banner_ft.png') repeat;height: 360px; position: relative;z-index: 3; margin-bottom: 224px;}
 	.banft_txt{text-align: center;padding: 160px 0 0;color:#fff;line-height: 30px;}
 	.banft_txt p{text-align: center;font-size: 24px;font-style:italic }
 	.banft_txt span{font-size: 14px;display: block;}
 /**/
-.footer{background: #000;height: 370px;padding:180px 0 0;margin-top: -360px; position: relative;}
+.footer{background: #000;height: 370px;padding:180px 0 0; position: fixed; bottom:0; left: 0;  width: 100%;}
 	.ft_con{width: 1000px;margin: 0 auto 0;color:#555;font-size: 14px;}
 		.ft_mod{float: left;width: 250px;}
 			.ft_mod h3{}
@@ -114,7 +114,7 @@ a:hover{color:#000}
 				.work_item4{background-position: right bottom}
 
 
-.section{}
+.section{ position: relative;z-index: 10;background-color: #fff;}
 /*section awards*/
 .sec_awards{padding:50px 0}
 	.sectit{text-align: center;line-height: 80px;font-size: 48px;}
