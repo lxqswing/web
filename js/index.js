@@ -59,11 +59,11 @@ $(function(){
         var wScroll = $(document).scrollTop();
         var homeNumTop = $(".home_num").offset().top;
         var featureTop = $(".home_campaign").offset().top-100;
-        var blogTop = $(".home_bio").offset().top-100;
+        var blogTop = $(".home_bio").offset().top-400;
         var bannerFootTop = $(".banner_footer").offset().top-100;
         var backValue = wScroll - blogTop - 393;
         var bannerFootValue = wScroll - bannerFootTop;
-
+        var bgActionValue = wScroll - blogTop;
         if(wScroll > homeNumTop){
             show_num(12566,".num_one");
             show_num(135,".num_two");
@@ -83,31 +83,20 @@ $(function(){
                     });
             });
         }
-        // if((wScroll > blogTop)&&(backValue > 0)){
-            
-        //     //$('.home_bio').stellar({verticalOffset:"1655"});
-        //     //.animate({backgroundPosition:'0 '+backValue+'px'},10);
-        //  }
-        // if((wScroll > bannerFootTop)&&(360 > bannerFootValue)&&(bannerFootValue > 0)){
-        //     //console.log(bannerFootValue);
-        //     //$('.footer').animate({marginTop:bannerFootValue+'px'},10);
-        //     $('.footer').css({
-        //         '-webkit-transform':'translate3d(0,'+bannerFootValue+'px,0)',
-        //         '-moz-transform':'translate3d(0,'+bannerFootValue+'px,0)',
-        //         '-ms-transform':'translate3d(0,'+bannerFootValue+'px,0)',
-        //         '-o-transform':'translate3d(0,'+bannerFootValue+'px,0)',
-        //         'transform':'translate3d(0,'+bannerFootValue+'px,0)'});
-        // }
+        if(wScroll > blogTop){
+
+             if(bgActionValue < 394){
+                $('.bg_action').css({
+                    '-webkit-transform':'translate3d(0,'+bgActionValue+'px,0)',
+                    '-moz-transform':'translate3d(0,'+bgActionValue+'px,0)',
+                    '-ms-transform':'translate3d(0,'+bgActionValue+'px,0)',
+                    '-o-transform':'translate3d(0,'+bgActionValue+'px,0)',
+                    'transform':'translate3d(0,'+bgActionValue+'px,0)'
+                });
+            }
+        }
+        
     });
-    // var bannerItemWidth = $(".banner_list li").width();
-    // var bannerItem = $(".banner_list li").length;
-    // var bannerWidth = bannerItemWidth*bannerItem;
-    // $(".banner_list").css("width",bannerWidth);
-    // $(".banner_list li").css("width",bannerItemWidth);
-    // $(".banner_action .next").click(function(){
-    //     //alert(bannerItem);
-    //     $(".banner_list").animate({"left":-bannerItemWidth});
-    // });
     var bodyHeight = $(window).height();
     $('.banner_list img').height(bodyHeight);
     $('.banner_list').bxSlider();
@@ -159,12 +148,19 @@ $(function(){
     });
     $(".home_cambtn").click(function(e){
         e.preventDefault();
-        $(".home_camcon").append('<div class="cam_item first opic"><img src="images/campaign_demo2.jpg" /><p>All starts with an Audi</p></div><div class="cam_item second opic"><img src="images/campaign_demo1.jpg" /><p>All starts with an Audi</p></div><div class="cam_item third opic"><img src="images/campaign_demo2.jpg" /><p>All starts with an Audi</p></div>');
-        $(".first").animate({top:"0"},
+        $(this).css('visibility','hidden');
+
+        $(".home_camcon").append('<div class="cam_item add_first"><img src="images/campaign_demo2.jpg" /><p>All starts with an Audi</p></div><div class="cam_item add_second"><img src="images/campaign_demo1.jpg" /><p>All starts with an Audi</p></div><div class="cam_item add_third"><img src="images/campaign_demo2.jpg" /><p>All starts with an Audi</p></div>');
+        
+        $(".add_first").animate({top:"0"},
             function(){
-                $(".second").css("display","block").animate({top:"0"},
+                $(".add_second").css("display","block").animate({top:"0"},
                     function(){
-                        $(".third").css("display","block").animate({top:"0"});
+                        $(".add_third").css("display","block").animate({top:"0"},
+                            function(){
+                                $('.home_cambtn').css('visibility','visible');
+                                
+                            });
                     });
             });
     });
