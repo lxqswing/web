@@ -270,15 +270,15 @@ body{
 	0%   {transform:translateY(100%); opacity: 0;}
 	100% {transform:translateY(0); opacity: 1;}
 }
-.first{
+.first, .add_first{
 	top: 265px;
 	position: relative;
 }
-.second{
+.second, .add_second{
 	top: 365px;
 	position: relative;
 }
-.third{
+.third, .add_third{
 	top: 665px;
 	position: relative;
 }
@@ -286,7 +286,7 @@ body{
 	top: 100px;
 	position: relative;
 }
-.second,.third{
+.second,.third,.add_second, .add_third{
 	display: none;
 }
 .home_numtable strong i {
