@@ -1,5 +1,8 @@
 
 $(function(){
+    $(window).resize(function() {
+        window.location.reload();
+    });
     var bodyHeight = $(document.body).height();
     var subNavHeight = $(window).height()-60;
     $('.nav_wrapper').css("height",bodyHeight);
@@ -10,10 +13,10 @@ $(function(){
         var headerTop = $(window).height()-60;
         if(wScroll>headerTop){
         	$(".header").css({"position":"fixed",top:"0",marginTop:"0"});
-            $('.banpho').css('display','none');
+            $('.banpho').css('visibility','hidden');
         }
         if(wScroll<headerTop){
-            $('.banpho').css('display','block');
+            $('.banpho').css('visibility','visible');
         	$(".header").css({"position":"absolute",top:"auto"});
             
         }

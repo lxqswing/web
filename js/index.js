@@ -64,7 +64,7 @@ $(function(){
         var bannerFootTop = $(".banner_footer").offset().top-100;
         var backValue = wScroll - blogTop - 393;
         var bannerFootValue = wScroll - bannerFootTop;
-        var bgActionValue = wScroll - blogTop;
+        var bgActionValue = (wScroll - blogTop)*3;
         if(wScroll > homeNumTop){
             show_num(12566,".num_one");
             show_num(135,".num_two");
@@ -151,9 +151,9 @@ $(function(){
     $(".home_cambtn").click(function(e){
         e.preventDefault();
         $(this).css('visibility','hidden');
-
+        var camconHeight = $('.home_camcon').height() + 265;
+        $(".home_camcon").animate({height:camconHeight});
         $(".home_camcon").append('<div class="cam_item add_first"><img src="images/campaign_demo2.jpg" /><p>All starts with an Audi</p></div><div class="cam_item add_second"><img src="images/campaign_demo1.jpg" /><p>All starts with an Audi</p></div><div class="cam_item add_third"><img src="images/campaign_demo2.jpg" /><p>All starts with an Audi</p></div>');
-        
         $(".add_first").animate({top:"0"},
             function(){
                 $(".add_second").css("display","block").animate({top:"0"},
