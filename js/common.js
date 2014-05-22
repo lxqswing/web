@@ -4,6 +4,7 @@ $(function(){
     var subNavHeight = $(window).height()-60;
     $('.nav_wrapper').css("height",bodyHeight);
     $('.sub_nav').css("height",subNavHeight);
+    
     $(document).scroll(function(){
     	var wScroll = $(document).scrollTop();
         var headerTop = $(window).height()-60;

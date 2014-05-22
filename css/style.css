@@ -237,7 +237,7 @@ a:hover{color:#000}
 		.home_cambtn_wrapper{ padding: 50px 0 90px 0; overflow: hidden; background: #F7F7F7;position: relative;z-index: 10;}
 		.home_cambtn_action{ overflow: hidden;height: 52px;}
 	.home_bio{height: 507px;position: relative;z-index: 10; overflow: hidden}
-		.bg_action{ position: absolute; left: 0; bottom: 0; z-index: -1; width: 100%; overflow: hidden; height: 900px; background: url('../images/test.jpg') no-repeat 0 0;}
+		.bg_action{ position: absolute; left: 0; bottom: 0; z-index: -1; width: 100%; overflow: hidden; height: 900px; background: url('../images/home_biobg.jpg') no-repeat 0 0; background-size: cover;}
 		.home_bio h2{font-size: 48px;line-height: 200px;text-align: center;}
 		.home_biotxt{font-size: 16px;width: 1090px;margin: 0 auto}
 			.home_biotxt strong{text-transform: uppercase;}

@@ -34,6 +34,7 @@ $(function(){
     $(window).stellar({
         positionProperty:'transform',
         hideDistantElements: false});
+
     function show_num(n,s){ 
         var it = $(s+" i"); 
         var len = String(n).length;
@@ -100,6 +101,7 @@ $(function(){
     var bodyHeight = $(window).height();
     $('.banner_list img').height(bodyHeight);
     $('.banner_list').bxSlider();
+    $('body').css('paddingTop',bodyHeight);
     var slider = $('.news_list').bxSlider();
     var count = slider.getSlideCount();
     $("#news_total").html(count);
